@@ -62,9 +62,9 @@ class HomeFragment : Fragment(R.layout.fragment_home), StockUpdateListener {
             }
         }
 
-        homeViewModel.medicineList.observe(viewLifecycleOwner, {
+        homeViewModel.medicineList.observe(viewLifecycleOwner) {
             mediAdapter.setItems(it)
-        })
+        }
 
     }
 

@@ -41,19 +41,22 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
             )
         }
 
-        loginViewModel.toastString.observe(viewLifecycleOwner, {
+        loginViewModel.toastString.observe(viewLifecycleOwner) {
             if (viewLifecycleOwner.lifecycle.currentState == Lifecycle.State.RESUMED) {
                 Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
             }
-        })
+        }
 
-        loginViewModel.loggedInUserId.observe(viewLifecycleOwner, {
+        loginViewModel.loggedInUserId.observe(viewLifecycleOwner) {
             if (viewLifecycleOwner.lifecycle.currentState == Lifecycle.State.RESUMED) {
                 findNavController().navigate(
-                    LoginFragmentDirections.actionFragmentLoginToFragmentHome(it,loginViewModel.isUserAdmin)
+                    LoginFragmentDirections.actionFragmentLoginToFragmentHome(
+                        it,
+                        loginViewModel.isUserAdmin
+                    )
                 )
             }
-        })
+        }
 
 
     }
