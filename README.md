@@ -4,7 +4,7 @@
   MediStock application demonstrates modern Android development with Hilt, Coroutines, Jetpack and Material Design based on MVVM architecture.
 </p>
 </br>
-<img src="https://user-images.githubusercontent.com/42215231/154853517-cb470df4-776f-4a0e-9d15-85e0bb46563f.gif" width="300" height="634.5" />
+<img src="https://user-images.githubusercontent.com/42215231/154858110-8ac2c892-de89-4f19-b2b9-068f7617357f.gif" width="300" height="634.5" />
 
 ## Tech stack & Open-source libraries
 - Minimum SDK level 16
